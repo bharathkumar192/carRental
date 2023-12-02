@@ -53,9 +53,8 @@
 				</div>
 				<div class="x_top_header_all_select_box_wrapper">
 					<ul>
-						<li class="login">	<a href="{{ url_for('login') }}"><i class="fa fa-power-off"></i> &nbsp;&nbsp;login</a>
-						</li>
-						<li class="register">	<a href="{{ url_for('register') }}"><i class="fa fa-plus-circle"></i> &nbsp;&nbsp;register</a>
+						
+						<li class="register">	<a href="{{ url_for('register') }}"><i class="fa fa-plus-circle"></i> &nbsp;&nbsp;Authenticate</a>
 						</li>
 					</ul>
 				</div>
@@ -235,50 +234,38 @@
                             <div class="jp_regiter_top_heading">
                                 <p>Fields marked with * are mandetory </p>
                             </div>
-                            <div class="row clearfix">
+							<form action="/">
+							<div class="row clearfix">
                                 <!--Form Group-->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="field-name" value="" placeholder="Username*">
+                                    <input type="text" name="username" value="" placeholder="Username*">
                                 </div>
                                 <!--Form Group-->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="field-name" value="" placeholder="Email*">
+                                    <input type="email" name="email" value="" placeholder="Email*">
                                 </div>
                                 <!--Form Group-->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
 
                                     <input type="password" name="field-name" value="" placeholder="password*">
                                 </div>
-                                <!--Form Group-->
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-
-                                    <input type="password" name="field-name" value="" placeholder="re-enter password*">
-                                </div>
+                                
 
                                 <!--Form Group-->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
 
-                                    <input type="text" name="field-name" value="" placeholder="phone">
-                                </div>
-
-                                <!--Form Group-->
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-
-                                    <input type="text" name="field-name" value="" placeholder="company name">
+                                    <input type="number" name="field-name" value="" placeholder="Phone Number">
 
                                 </div>
 
                                 <!--Form Group-->
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
 
-                                    <input type="text" name="field-name" value="" placeholder="website">
+                                    <input type="number" name="otp" value="" placeholder="OTP">
 
                                 </div>
-                                <!--Form Group-->
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-
-                                    <input type="text" name="field-name" value="" placeholder="address line">
-                                </div>
+								<button id="request-otp-btn">Request OTP</button>
+                                
 
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="check-box text-center">
@@ -289,12 +276,34 @@
                             </div>
 
                             <div class="login_btn_wrapper register_btn_wrapper login_wrapper register_wrapper_btn">
-                                <a href="#" class="btn btn-primary login_btn"> register </a>
+                                <a href="{{url_for('logged')}}" type="submit" class="btn btn-primary login_btn"> register </a>
                             </div>
-                            <div class="login_message">
-                                <p>Already a member? <a href="login.html"> Login Here </a> </p>
-                            </div>
-
+                           
+							<script>
+								document.getElementById('request-otp-btn').addEventListener('click', function(event) {
+									event.preventDefault();  // Prevent the default form submission
+								
+									var email = document.getElementsByName('email')[0].value;
+									// Make an AJAX request to your Flask server
+									fetch('/validate', {
+										method: 'POST',
+										headers: {
+											'Content-Type': 'application/json',
+										},
+										body: JSON.stringify({ email: email }),
+									})
+									.then(response => response.json())
+									.then(data => {
+										console.log('Success:', data);
+										// You can do something here upon success
+									})
+									.catch((error) => {
+										console.error('Error:', error);
+									});
+								});
+								</script>
+								
+						</form>
                         </div>
 
                     </div>

@@ -53,12 +53,15 @@
 					</ul>
 				</div>
 				<div class="x_top_header_all_select_box_wrapper">
+					{% if show_item %}
+						<p>{{user_email}}</p>
+					{% endif %}
+					{% if display %}
 					<ul>
-						<li class="login">	<a href="{{ url_for('login') }}"><i class="fa fa-power-off"></i> &nbsp;&nbsp;login</a>
-						</li>
-						<li class="register">	<a href="{{ url_for('register') }}"><i class="fa fa-plus-circle"></i> &nbsp;&nbsp;register</a>
+						<li class="register">	<a href="{{ url_for('register') }}"><i class="fa fa-plus-circle"></i> &nbsp;&nbsp;Authenticate</a>
 						</li>
 					</ul>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -799,7 +802,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -853,7 +856,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -907,7 +910,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -961,7 +964,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1015,7 +1018,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1069,7 +1072,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1123,7 +1126,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1177,7 +1180,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1243,7 +1246,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1297,7 +1300,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1351,7 +1354,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1405,7 +1408,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1460,7 +1463,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1514,7 +1517,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1568,7 +1571,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1622,7 +1625,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1689,7 +1692,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1743,7 +1746,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1797,7 +1800,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1851,7 +1854,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1905,7 +1908,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -1959,7 +1962,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -2014,7 +2017,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
@@ -2068,7 +2071,7 @@ your desired destination</h2>
 										</div>
 										<div class="x_car_offer_bottom_btn float_left">
 											<ul>
-												<li><a href="#">Book now</a>
+												<li><a href="https://book.stripe.com/dR6aESbCP9Udg6c145">Book now</a>
 												</li>
 												<li><a href="#">Details</a>
 												</li>
